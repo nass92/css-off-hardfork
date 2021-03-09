@@ -3,11 +3,105 @@
   --orange: #fe6638;
   --green: #80b238;
   --blue: #80c1d6;
+  --white: #fff;
 }
 
 * {
   box-sizing: border-box;
+  text-align: center;
+  margin: 0;
 }
+
+/* navigation bar */
+
+nav{
+  padding: 20px;
+  background-color: rgba(128,178,56,0.75);
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;  
+}
+nav a:hover {
+  background-color: #303030;
+  
+}
+nav li:hover{
+transform: rotate(20deg);
+}
+
+/* header */
+
+header {
+  min-height: 50vh;
+  background-size: cover;
+  background-image: url("/img/blue-splash.png");
+  color: #fe6638;
+  text-shadow: 1px 1px var(--white) ;
+}
+
+header h1 {
+  margin-top: 10rem;
+
+}
+
+
+
+
+
+/* section obstacles */
+
+#obstacles {
+  background-color: #fe6638;
+  padding-bottom: 3rem;
+  border-bottom: 10px solid #ee5c2ffa;
+}
+#obstacles h2 {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  border-top: 10px solid #ee5c2ffa;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.wrap article {
+  background-color: var(--green);
+  margin: 5rem;
+  border-radius: 1rem;
+}
+
+/* section prizes */
+#prizes {
+  background-color: #80b238;
+   padding-bottom: 3rem;
+   border-bottom: 10px solid  rgb(85, 48%, 48%);
+}
+
+#prizes h2 {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  border-top: 10px solid hsl(85,53%,33%);
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+}
+#prizes article {
+  border: 3px dotted var(--yellow);
+ margin: 2rem;
+ padding: 1rem 0;
+
+}
+
+/* ensemble des item */
+.grid{
+  display: flex;
+  flex-direction: column;
+}
+
+/* body */
 
 body {
   background: var(--blue);
@@ -16,6 +110,7 @@ body {
   margin: 0;
   font-size: 1.5rem;
 }
+
 
 h1,
 h2 {
@@ -28,9 +123,90 @@ h1 + p,
 button {
   font-family: Bangers, sans-serif;
   letter-spacing: 2px;
+  
+  
 }
+h2{
+  font-size: 80px;
+}
+/* boutton */
+
+button{
+  background-color: #eef13f;
+  color: black;
+  margin:auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 0%;
+  font-size: 3rem;
+}
+input{
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 3rem;
+  color: #fff;
+  text-align: left;
+  background-color: #fe6638;
+ 
+}
+
+input::placeholder {
+  color: white;
+ font-size: 1.5rem;
+}
+/*formulaire*/
+form {
+  display: flex;
+  flex-direction: column;
+  
+}
+form label {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  /*margin-left: 0;*/
+ text-align: left;
+}
+
+
+/*footer*/
+ 
+footer{
+  background-color: #eef13f ;
+}
+
 
 /* ... Your turn! ... */
 
 @media (min-width: 640px) {
+
+
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+.grid article {
+  flex: auto;
+
+}
+
+h3 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+form label{
+margin: auto;
+}
+button {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  
+}
+
 }
